@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+#maini {
+  margin: auto;
+  width: 50%;
+  text-align:center
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 5px;
+}
+.button svg {
+  height: 55px;
+  width: 150px;
+  fill: none;
+  stroke-width: 5;
+}
+.button svg .o1 {
+  stroke: rgba(0, 217, 255, 0.7);
+  fill: rgb(1, 170, 142);
+  transition: all 1s ease-in-out;
+}
+.button svg .o2 {
+  stroke: white;
+  stroke-dasharray: 20 420;
+  stroke-dashoffset: 20;
+  transition: all 1s ease-in-out;
+}
+.button span {
+  position: absolute;
+  margin: auto 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.button:hover .o1 {
+  fill: rgba(255, 0, 179, 0.3);
+}
+.button:hover .o2 {
+  stroke-dashoffset: -420;
+}
+
+
+/* relevant styles */
+.img__wrap {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.img__description_layer {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(95, 95, 95, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
+
